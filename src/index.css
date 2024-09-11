@@ -5,9 +5,12 @@
 body {
   background: #1b1b1b;
 }
-
+.the-gradient {
+  background: linear-gradient(#101010, #1b1b1b);
+}
 .city {
   background-image: url('./assets/rafathedev.png');
+  background: #101010;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -38,30 +41,30 @@ body {
 }
 @keyframes animateshadow {
   0% {
-    box-shadow: 0px 0px 15px 2px green;
+    box-shadow: 0px 0px 15px 2px rgb(29, 224, 195);
   }
   50% {
-    box-shadow: 0px -12px 15px 2px red;
+    box-shadow: 0px -12px 15px 2px rgb(215, 51, 42);
   }
   75% {
-    box-shadow: 0px 12px 15px 2px blue;
+    box-shadow: 0px 12px 15px 2px rgb(16, 16, 191);
   }
   100% {
-    box-shadow: 0px 0px 15px 2px green;
+    box-shadow: 0px 0px 15px 2px rgb(29, 224, 195);
   }
 }
 
 @keyframes animatetext {
   0% {
-    color: green;
+    color: rgb(29, 224, 195);
   }
   50% {
-    color: red;
+    color: rgb(215, 51, 42);
   }
   75% {
-    color: blue;
+    color: rgb(16, 16, 191);
   }
   100% {
-    color: green;
+    color: rgb(29, 224, 195);
   }
 }

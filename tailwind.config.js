@@ -8,7 +8,7 @@ export default {
   theme: {
     colors: {
       'black': '#1b1b1b',
-      'dark-black': '#030303',
+      'dark-black': '#101010',
       'gray': '#1f1f1f',
       'gray-light': '#737373',
       'green': '#193028',

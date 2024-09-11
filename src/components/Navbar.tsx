@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
+import { FaXmark } from "react-icons/fa6";
 
 export const Navbar: React.FC = () => {
   const [menu, setMenu] = useState(false);
@@ -17,7 +18,7 @@ export const Navbar: React.FC = () => {
         <div>
           <h1 className="font-bold text-gray-light">
             Made by
-            <span className="ml-2 font-light text-2xl text-white hover:text-white hover:border-b-2 border-green transition duration-300 ease-in-out">
+            <span className="animate-text ml-2 font-light text-2xl text-white hover:text-white hover:border-b-2 border-green transition duration-300 ease-in-out">
               ravathedev
             </span>
           </h1>
@@ -27,21 +28,25 @@ export const Navbar: React.FC = () => {
 
         {/* MOBILE MENU */}
         <div className="block md:hidden">
-          <HiMenuAlt4 onClick={handleToggle} className="size-8 text-green" />
+          {menu ? (
+            <FaXmark onClick={handleToggle} className="size-6 text-white" />
+          ) : (
+            <HiMenuAlt4 onClick={handleToggle} className="size-6 text-white" />
+          )}
         </div>
 
         {/* DESKTOP MENU  */}
         <ul className="hidden md:flex gap-2 items-center text-white h-full text-1xl">
-          <li className="cursor-pointer text-gray-light transition duration-200 ease-in-out border-b-4 border-black hover:text-white hover:border-b-4 hover:border-green">
+          <li className="cursor-pointer text-gray-light transition duration-150 ease-in-out border-b-2 border-black hover:text-white hover:border-b-2 hover:border-gray-light">
             home
           </li>
-          <li className="cursor-pointer text-gray-light transition duration-200 ease-in-out border-b-4 border-black hover:text-white hover:border-b-4 hover:border-green">
+          <li className="cursor-pointer text-gray-light transition duration-150 ease-in-out border-b-2 border-black hover:text-white hover:border-b-2 hover:border-gray-light">
             about
           </li>
-          <li className="cursor-pointer text-gray-light transition duration-200 ease-in-out border-b-4 border-black hover:text-white hover:border-b-4 hover:border-green">
+          <li className="cursor-pointer text-gray-light transition duration-150 ease-in-out border-b-2 border-black hover:text-white hover:border-b-2 hover:border-gray-light">
             portfolio
           </li>
-          <li className="cursor-pointer text-gray-light transition duration-200 ease-in-out border-b-4 border-black hover:text-white hover:border-b-4 hover:border-green">
+          <li className="cursor-pointer text-gray-light transition duration-150 ease-in-out border-b-2 border-black hover:text-white hover:border-b-2 hover:border-gray-light">
             contact
           </li>
         </ul>
@@ -49,9 +54,10 @@ export const Navbar: React.FC = () => {
         {/* CONTAINER ENDS */}
       </div>
 
+      {/* MOBILE MENU TOGGLED */}
       <div
-        className={`top-0 py-5 bg-gray w-full md:hidden ${
-          menu ? "relative" : "hidden"
+        className={`top-10 z-40 py-5 bg-gray w-full md:hidden transition duration-150 ease-in-out ${
+          menu ? "fixed translate-x-0" : "fixed translate-x-[-100%]"
         }`}
       >
         <ul className="text-center text-white">
