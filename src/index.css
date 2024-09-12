@@ -34,7 +34,7 @@ body {
 
 }
 .animate-shadow {
-  animation: animateshadow 10s infinite ease-in-out, zoom 1500ms ease-out;
+  animation: animateshadow 10s infinite ease-in-out, zoom 800ms ease-out;
 }
 .animate-text {
   animation: animatetext 10s infinite ease-in-out;
