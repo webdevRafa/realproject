@@ -34,7 +34,7 @@ body {
 
 }
 .animate-shadow {
-  animation: animateshadow 10s infinite ease-in-out;
+  animation: animateshadow 10s infinite ease-in-out, zoom 1500ms ease-out;
 }
 .animate-text {
   animation: animatetext 10s infinite ease-in-out;
@@ -66,5 +66,17 @@ body {
   }
   100% {
     color: rgb(29, 224, 195);
+  }
+}
+
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
   }
 }

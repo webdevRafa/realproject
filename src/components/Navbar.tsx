@@ -12,13 +12,13 @@ export const Navbar: React.FC = () => {
   return (
     <>
       {/* NAVBAR CONTAINER */}
-      <div className="sticky z-50 bg-black top-0 flex px-5 py-2 justify-between items-center h-full">
+      <div className="sticky z-50 bg-black top-0 flex px-5 py-2 justify-between items-center">
         {/* NAME / LOGO */}
 
         <div>
           <h1 className="font-bold text-gray-light">
             Made by
-            <span className="animate-text ml-2 font-light text-2xl text-white hover:text-white hover:border-b-2 border-green transition duration-300 ease-in-out">
+            <span className="animate-text ml-2 font-light text-2xl text-white hover:text-white hover:border-b-2 border-gray-light transition duration-300 ease-in-out">
               ravathedev
             </span>
           </h1>
@@ -56,8 +56,8 @@ export const Navbar: React.FC = () => {
 
       {/* MOBILE MENU TOGGLED */}
       <div
-        className={`top-10 z-40 py-5 bg-gray w-full md:hidden transition duration-150 ease-in-out ${
-          menu ? "fixed translate-x-0" : "fixed translate-x-[-100%]"
+        className={`fixed top-10 z-40 py-5 bg-gray w-full md:hidden transition duration-150 ease-in-out ${
+          menu ? "translate-x-0" : "translate-x-[-100%]"
         }`}
       >
         <ul className="text-center text-white">

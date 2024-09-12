@@ -2,10 +2,10 @@ export const About: React.FC = () => {
   return (
     <>
       <div className="w-full py-[30px] the-gradient">
+        <h1 className="pl-5 sticky top-[48px] z-30 text-white bg-dark-black text-1xl mb-20">
+          ABOUT ME
+        </h1>
         <div className="mx-auto w-[90%] max-w-[1200px]">
-          <h1 className="sticky top-[50px] z-30 text-white font-bold text-2xl mb-20">
-            ABOUT ME
-          </h1>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consectetur neque unde enim praesentium aut, quidem quisquam
