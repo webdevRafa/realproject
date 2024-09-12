@@ -3,7 +3,7 @@ export const About: React.FC = () => {
     <>
       <div className="w-full py-[30px] the-gradient">
         <h1 className="pl-5 sticky top-[48px] z-30 text-white bg-dark-black text-1xl mb-20">
-          ABOUT ME
+          under development
         </h1>
         <div className="mx-auto w-[90%] max-w-[1200px]">
           <p>
