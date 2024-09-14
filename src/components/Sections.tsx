@@ -20,7 +20,7 @@ export const Sections: React.FC = () => {
   const sections = [
     {
       title: "about",
-      description: "learn more about me",
+      description: "get to know me",
       content: (
         <div className="w-full appear transition-all duration-200 ease-in-out">
           <p className="text-gray-light">
@@ -39,7 +39,7 @@ export const Sections: React.FC = () => {
     },
     {
       title: "projects",
-      description: "see my projects",
+      description: "view my work",
       content: (
         <div className="w-full appear transition-all duration-200 ease-in-out">
           <p className="text-gray-light">
