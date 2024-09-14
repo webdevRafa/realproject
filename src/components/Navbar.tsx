@@ -3,8 +3,10 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { FaXmark } from "react-icons/fa6";
 
 export const Navbar: React.FC = () => {
+  // STATE FOR MENU
   const [menu, setMenu] = useState(false);
 
+  // HANDLES TOGGLE. TRACKS PREVIOUS MENU STATE AND THEN RETURNS THE OPPOSITE OF WHATEVER THE PREV STATE WAS.
   const handleToggle = () => {
     setMenu((prevMenu) => !prevMenu);
   };
@@ -12,9 +14,8 @@ export const Navbar: React.FC = () => {
   return (
     <>
       {/* NAVBAR CONTAINER */}
-      <div className="sticky z-50 bg-black top-0 flex px-5 py-2 justify-between items-center">
+      <div className="fixed z-50 bg-black top-0 flex px-5 py-2 justify-between items-center w-full">
         {/* NAME / LOGO */}
-
         <div>
           <h1 className="font-bold text-gray-light">
             Made by
@@ -23,8 +24,6 @@ export const Navbar: React.FC = () => {
             </span>
           </h1>
         </div>
-
-        {/* MENU ITEMS */}
 
         {/* MOBILE MENU */}
         <div className="block md:hidden">
@@ -54,12 +53,15 @@ export const Navbar: React.FC = () => {
         {/* CONTAINER ENDS */}
       </div>
 
-      {/* MOBILE MENU TOGGLED */}
+      {/* MOBILE MENU  */}
+
+      {/* container */}
       <div
         className={`fixed top-10 z-40 py-5 bg-gray w-full md:hidden transition duration-150 ease-in-out ${
           menu ? "translate-x-0" : "translate-x-[-100%]"
         }`}
       >
+        {/* mobile menu items */}
         <ul className="text-center text-white">
           <li className="my-1.5">home</li>
           <li className="my-1.5">about</li>
